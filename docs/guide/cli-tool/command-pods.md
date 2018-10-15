@@ -1,19 +1,12 @@
-# Architecture
+# List PODs
 
+Your Storefront Cloud instance may consist of one or many [PODs](https://kubernetes.io/docs/concepts/workloads/pods/pod/). Pods are the smallest deployable units of computing that can be created and managed in Kubernetes.
 
+A pod (as in a pod of whales or pea pod) is a group of one or more containers (such as Docker containers), with shared storage/network, and a specification for how to run the containers. A pod’s contents are always co-located and co-scheduled, and run in a shared context. A pod models an application-specific “logical host” - it contains one or more application containers which are relatively tightly coupled — in a pre-container world, being executed on the same physical or virtual machine would mean being executed on the same logical host.
 
- Typically, You're getting from Storefront Cloud team access to two Kubernetes **Namespaces** (two instances). For instance - let's take a look how the deployment of our <a href="https://demo.storefrontcloud.io">demo.storefrontcloud.io</a>. 
+In Vue Storefront Your instance is initialized with the following PODs (the names are automatically generated and are subject to change in Your Project):
 
- There are **two namespaces**:
-
- - **demo-storefrontcloud-io** - which is the instance where the **prod** version of Your Vue Storefront app is deployed,
- - **demo-test-storefrontcloud-io** - which is the instance where the **test** versin of Your Vue Storefront app is deployed.
-
-<img src="/doc/architecture-diagram.png" />
-
- Each namespaces includes **PODs** (POD is kind of Kubernetes app container):
-
- ```
+```
 ┌─────────────────────────────────────────────┬──────────┬──────────┬─────────────────────────┐
 │ POD name                                    │ Role     │ State    │ Start time              │
 ├─────────────────────────────────────────────┼──────────┼──────────┼─────────────────────────┤
@@ -31,15 +24,10 @@
 └─────────────────────────────────────────────┴──────────┴──────────┴─────────────────────────┘
 ```
 
-Together with the Kubernetes namespaces, Vue Storefront team is providing You with **git** access via <a href="https://code.vuestorefront.io">Storefront Cloud Code Access</a> site. You may find two repositories in there:
+To list the available PODs in Your environment please run the following command:
 
-- <a href="https://code.storefrontcloud.io/Divante/demo-storefrontcloud-io">**demo-storefrontcloud-io**</a> - which **master** branch is used to deploy the production frontend and **develop** branch is used to deploy the test frontend,
-- <a href="https://code.storefrontcloud.io/Divante/demo-storefrontcloud-io-api">**demo-storefrontcloud-io-api**</a> - which **master** branch is used to deploy the production API and **develop** branch is used to deploy the test API.
+```bash
+node scripts/cli.js pods
+```
 
-The namespaces are bound to the public URL addresses:
-
-- <a href="https://code.storefrontcloud.io/Divante/demo-storefrontcloud-io">**demo-storefrontcloud-io**</a> is deployed under <a href="https://demo.storefrontcloud.io">demo.storefrontcloud.io</a>
-- <a href="https://code.storefrontcloud.io/Divante/demo-storefrontcloud-io-api">**demo-storefrontcloud-io-api**</a> is deployed under <a href="https://demo.storefrontcloud.io/api">demo.storefrontcloud.io/api</a>
-
-
-<img src="/doc/user-flow-diagram.png" />
+You may run the subsequent `cli` calls using the selected POD context.
