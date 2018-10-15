@@ -1,0 +1,20 @@
+{
+  "name": "help-storefrontcloud-io",
+  "version": "1.0.0",
+  "description": "Help site for Storefront Cloud",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://code.storefrontcloud.io/StorefrontCloud/help-storefrontcloud-io"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^0.14.4"
+  }
+  
+}
