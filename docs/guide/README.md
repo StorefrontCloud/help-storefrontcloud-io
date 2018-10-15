@@ -41,4 +41,4 @@ Storefront Cloud is powered by [Vue Storefront](https://vuestorefront.io) techno
 
 - [Our Github](http://github.com/DivanteLtd/vue-storefront),
 - [Our Community Slack](https://slack.vuestorefront.io).
-
+- [Vue Storefront Docs](http://divanteltd.github.io/vue-storefront/)
