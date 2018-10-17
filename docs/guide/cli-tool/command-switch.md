@@ -3,7 +3,7 @@
 The **Kubernetes Namespace** implies the website You're accesing. By default You're getting two namespaces:
 
 - **instance-storefrontcloud-io** - which is the main, public instance (accesible via **instance.storefrontcloud.io**),
-- **instance-test-storefrontcloud-io** - which is the second development/test, instance (accesible via **instance.test.storefrontcloud.io**).
+- **instance-test-storefrontcloud-io** - which is the second development/test, instance (accesible via **instance-test.storefrontcloud.io**).
 
 You may switch the instance any time by the following command:
 

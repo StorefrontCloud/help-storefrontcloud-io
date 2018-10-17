@@ -26,8 +26,8 @@ The namespaces are bound to the public URL addresses:
 
 - <a href="https://code.storefrontcloud.io/Divante/demo-storefrontcloud-io">**demo-storefrontcloud-io**</a> **master branch** is deployed under <a href="https://demo.storefrontcloud.io">demo.storefrontcloud.io</a>
 - <a href="https://code.storefrontcloud.io/Divante/demo-storefrontcloud-io-api">**demo-storefrontcloud-io-api**</a> **master branch** is deployed under <a href="https://demo.storefrontcloud.io/api">demo.storefrontcloud.io/api</a>
-- <a href="https://code.storefrontcloud.io/Divante/demo-storefrontcloud-io">**demo-storefrontcloud-io**</a> **develop branch** is deployed under <a href="https://demo.test.storefrontcloud.io">demo.test.storefrontcloud.io</a>
-- <a href="https://code.storefrontcloud.io/Divante/demo-storefrontcloud-io-api">**demo-storefrontcloud-io-api**</a> **develop branch** is deployed under <a href="https://demo.test.storefrontcloud.io/api">demo.test.storefrontcloud.io/api</a>
+- <a href="https://code.storefrontcloud.io/Divante/demo-storefrontcloud-io">**demo-storefrontcloud-io**</a> **develop branch** is deployed under <a href="https://demo-test.storefrontcloud.io">demo-test.storefrontcloud.io</a>
+- <a href="https://code.storefrontcloud.io/Divante/demo-storefrontcloud-io-api">**demo-storefrontcloud-io-api**</a> **develop branch** is deployed under <a href="https://demo-test.storefrontcloud.io/api">demo-test.storefrontcloud.io/api</a>
 
 <img src="/doc/architecture-diagram.png" alt="The Architecture diagram for Storefront Cloud" />
 

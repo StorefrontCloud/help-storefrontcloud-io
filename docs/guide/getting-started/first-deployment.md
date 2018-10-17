@@ -18,7 +18,7 @@ The namespaces are bound to the public URL addresses:
 
 To deploy the code changes, please:
 
-- do check if all changes are commited to the right branch (develop for **theinstance.test.storefrontcloud.io**, master for **theinstance.storefrontcloud.io**),
+- do check if all changes are commited to the right branch (develop for **theinstance-test.storefrontcloud.io**, master for **theinstance.storefrontcloud.io**),
 - execute the CLI tool [deploy command](../cli-tool/command-deploy.html).
 
 To deploy the changes to **demo.storefrontcloud.io** You may run:

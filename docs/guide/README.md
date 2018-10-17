@@ -15,7 +15,7 @@ In the next step the Cloud Team will contact You to finalize the order + payment
 By default all customers are getting two public instances:
 
 - **https://instance-name.storefrontcloud.io**
-- **https://instance-name.test.storefrontcloud.io**
+- **https://instance-name-test.storefrontcloud.io**
 
 ... plus Two Git repositories - one for [Frontend app](http://github.com/DivanteLtd/vue-storefront) and second for [API app](https://github.com/DivanteLtd/vue-storefront-api).
 
