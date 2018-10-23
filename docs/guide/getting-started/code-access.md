@@ -2,7 +2,7 @@
 
 Storefront Cloud service is accessible via two separate channels:
 
- - [CLI Tool](https://code.storefrontcloud.io/StorefrontCloud/storefrontcloud-cli) for the infrastructure management,
+ - [CLI Tool](https://github.com/StorefrontCloud/storefrontcloud-cli) for the infrastructure management,
  - [Storefront Cloud Code Access](https://code.storefrontcloud.io) portal for source code management.
 
  Storefront Cloud is run by the [Vue Storefront](http://github.com/DivanteLtd/vue-storefront) technology. You may want to customize or modify the behavior of Frontend or/and the API layers.

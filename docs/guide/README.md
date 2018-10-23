@@ -23,7 +23,7 @@ All the code is deployed using the **zero-downtime** scheme.
 
 To access Your environment You'll get the following information:
 
-- **kubectl.config** file including all the certificates required for this tool to connect to Your instance via [Storefront Cloud CLI tool](https://code.storefrontcloud.io/StorefrontCloud/storefrontcloud-cli),
+- **kubectl.config** file including all the certificates required for this tool to connect to Your instance via [Storefront Cloud CLI tool](https://github.com/StorefrontCloud/storefrontcloud-cli),
 - **login + password** to [Storefront Cloud Code Access Site](https://code.storefrontcloud.io) - Your Gitlab instance where You can manage the instances.
 
 Read more on [the Architecture](getting-started/architecture.html) to better understand the Storefront Cloud setup.

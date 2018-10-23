@@ -13,15 +13,9 @@ The setup steps, getting access to Your cloud:
 First, install `storefrontcloud-cli` (requirements: `node 8.x+, yarn`):
 
 ```bash
-git clone https://code.storefrontcloud.io/StorefrontCloud/storefrontcloud-cli.git`
+git clone https://github.com/StorefrontCloud/storefrontcloud-cli.git`
 cd storefrontcloud-cli
 yarn install
-```
-
-or use the `npm` repository:
-
-```bash
-npm install -g storefrontcloud-cli
 ```
 
 #### Setup Your account:
