@@ -6,7 +6,7 @@ To transfer files TO and FROM any POD in Your namespace please do use the follow
 node scripts/cli.js cp api:var/catalog.json catalog-copy.json
 ```
 
-This command will copy the `var/catalog.json` file from the container with the role `api` to local file named `catalog-copy.json`. You can do the reverse operation (uploading the local file) with the following command:
+This command will copy the `var/catalog.json` file from the container with the role `api` to a local file named `catalog-copy.json`. You can do the reverse operation (uploading the local file) with the following command:
 
 ```
 node scripts/cli.js cp catalog-copy.json api:var/catalog.json 
