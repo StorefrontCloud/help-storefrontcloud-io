@@ -1,13 +1,13 @@
 # Execute remote command
 
-Storefront Cloud CLI tool allows You to execute the remote commands within the selected PODs:
+The Storefront Cloud CLI tool allows you to execute remote commands within the selected PODs:
 
 ```bash
 node scripts/cli.js exec --pod=front -- ps
 node scripts/cli.js exec --pod=api -- ps
 ```
 
-**Note:** You may also use the exact POD name by the switches presented above. If no switch is used - then the default POD (selected by `cli.js pod`) and the default Namespace (selected by `cli.js namespace`) are being used.
+**Note:** You may also use the exact POD name by using the switches presented above. If no switch is used, then the default POD (selected by `cli.js pod`) and the default Namespace (selected by `cli.js namespace`) are used.
 
 <img src="/doc/exec-command.png" />
 
