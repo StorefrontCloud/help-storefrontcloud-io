@@ -1,11 +1,11 @@
 # Magento integration
 
-Storefront Cloud offers You special Command Line tool to import the data from Your Magento2 instance. 
-Before that we need to configure Your Magento2 instance to provide us with the **oauth2** credentials, required to run the API requests.
+Storefront Cloud offers you a special Command Line tool to import the data from your Magento2 instance. 
+Before that, we need to configure your Magento2 instance to provide us with the **oauth2** credentials, required to run the API requests.
 
 ## Magento API configuration
 
-The tool is using Magento2 API via OAuth authorization, so you need to prepare Magento Integration access at first. Go to your Magento2 admin panel and click: _System -> Integrations_
+The tool uses the Magento2 API via OAuth authorization, so you need to prepare Magento Integration access beforehand. Go to your Magento2 admin panel and click: _System -> Integrations_
 
 ![Magento Admin Panel](/doc/magento_1.png)
 
@@ -17,12 +17,12 @@ Then click _Add new integration_ and just fill:
 
 ![Magento API](/doc/magento_2.png)
 
-In the result you’ll click _Activate_ and get some oauth access tokens:
+In the result, you’ll click _Activate_ and get some oauth access tokens:
 
 ![Magento tokens](/doc/magento_3.png)
 
 Now please **create and edit** the `config/local.js` file in your **api repository** and modify the following section:
-<img src="/doc/create-config.png" alt="You may create new local config file using Gitlab" />
+<img src="/doc/create-config.png" alt="You may create a new local config file using Gitlab" />
 
 ```json
 {
@@ -68,12 +68,12 @@ Now please **create and edit** the `config/local.js` file in your **api reposito
 }
 ```
 
-<img src="/doc/edit-magento-config.png" alt="You may create edit local config file using Gitlab" />
+<img src="/doc/edit-magento-config.png" alt="You may create / edit a local config file using Gitlab" />
 
 ## Execute the import
 
-It’s safe to run these commands over and over as they’re doing `upsert` operation  - so inserts or updates the existing records.
-To execute the import script You should use our [Command line tool](https://github.com/StorefrontCloud/storefrontcloud-cli) and perform the `import` operation:
+It’s safe to run these commands over and over as they perform an `upsert` operation - which means these commands insert or update the existing records.
+To execute the import script, you should use our [Command line tool](https://github.com/StorefrontCloud/storefrontcloud-cli) and perform the `import` operation:
 
 ```
 node scripts/cli.js import
@@ -83,4 +83,4 @@ node scripts/cli.js import
 
 ## Advanced scenarios
 
-Storefront Cloud is using the [mage2vuestorefront](https://github.com/DivanteLtd/mage2vuestorefront) to execute the Magento synchronization. This tool offers way more syncing scenarios: for example on-demand indexing or delta-main indexing schemas. Please do [contact us](mailto:support@storefrontcloud.io) for details.
+Storefront Cloud uses the [mage2vuestorefront](https://github.com/DivanteLtd/mage2vuestorefront) to execute the Magento synchronization. This tool offers way more syncing scenarios: for example on-demand indexing or delta-main indexing schemas. Please [contact us](mailto:support@storefrontcloud.io) for details.
