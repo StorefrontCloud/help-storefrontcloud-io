@@ -1,6 +1,6 @@
 # Run the PM2 process manager
 
-Storefront Cloud is using the [`pm2`](http://pm2.keymetrics.io/) process manager to run both: `vue-storefront` and `vue-storefront-api`.
+Storefront Cloud uses the [`pm2`](http://pm2.keymetrics.io/) process manager to run both: `vue-storefront` and `vue-storefront-api`.
 
 You may use most of the standard PM2 features by running:
 
