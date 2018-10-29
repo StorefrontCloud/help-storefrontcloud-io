@@ -1,13 +1,13 @@
 # Command Line Access
 
-[**Storefront Cloud CLI**](https://github.com/StorefrontCloud/storefrontcloud-cli) tool is designed to let You manage Your Storefront Cloud namespaces. Most of the operations are available for the user as a self service. In cases of any problems or custom needs <a href="mailto:support@storefrontcloud.io">please do contact the Helpdesk</a>
+[**The Storefront Cloud CLI**](https://github.com/StorefrontCloud/storefrontcloud-cli) tool is designed to let you manage your Storefront Cloud namespaces. Most of the operations are available for the user as a self service. In case of any problems or custom needs, <a href="mailto:support@storefrontcloud.io">please contact the Helpdesk</a>
 
-Shortly after You register Your account on the <a href="https://storefrontcloud.io">storefrontcloud.io</a> You should receive a contact request from the Cloud Team. Then after agreeing on the service terms and conditions Cloud Team will provide You with:
+Shortly after you register your account on the <a href="https://storefrontcloud.io">storefrontcloud.io</a> site, you should receive a contact request from the Cloud Team. Then after agreeing on the service terms and conditions, the Cloud Team will provide you with:
 
-- **kube.config** file that You can paste or import to this tool for getting access to Your Kubernetes cluster,
+- **kube.config** file that you can paste or import to this tool for getting access to your Kubernetes cluster,
 - **login and password** to the <a href="https://code.storefrontcloud.io">Storefront Cloud Code Access</a> portal.
 
-The setup steps, getting access to Your cloud:
+Here are the setup steps for getting access to your cloud:
 
 #### Install storefrontcloud-cli
 First, install `storefrontcloud-cli` (requirements: `node 8.x+, yarn`):
@@ -18,16 +18,16 @@ cd storefrontcloud-cli
 yarn install
 ```
 
-#### Setup Your account:
+#### Setup your account:
 
 Please do run:
 `node scripts/cli.js setup`
 
-1. The setup wizard will ask You first about the **kube.config** file. You can save the file received from the Cloud Team to Your local file system (for example: **~/.kube/config** which is the default path) OR You can use Your default system editor to paste the config content directly during the setup.
+1. The setup wizard will ask you first about the **kube.config** file. You can save the file received from the Cloud Team to your local file system (for example: **~/.kube/config** which is the default path) OR you can use your default system editor to paste the config content directly during the setup.
 
-2. Then You have an option to use Your existing <a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/">kubectl</a> tool. If You haven't used it before the setup will download and install the tool to the current working directory.
+2. Then you have the option to use your existing <a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/">kubectl</a> tool. If you haven't used it before the setup will download and install the tool to the current working directory.
 
-3. The last question is about the default namespace. Please check the architecture diagram above. In our case we're providing the **demo-storefrontcloud-io** default namespace. That means that all subsequent calls will be made to the public instance of **demo.storefrontcloud.io** PODs. You can switch the default namespace by using `node scripts/cli.js namespace` command OR using the `--ns command` which is supported by all cli commands.
+3. The last question is about the default namespace. Please check the architecture diagram above. In our case, we provide the **demo-storefrontcloud-io** default namespace. That means that all subsequent calls will be made to the public instance of **demo.storefrontcloud.io** PODs. You can switch the default namespace by using the `node scripts/cli.js namespace` command OR using the `--ns command` which is supported by all cli commands.
 
 <img src="/doc/setup.jpg" />
 
