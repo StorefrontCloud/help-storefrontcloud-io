@@ -4,7 +4,7 @@ Your Storefront Cloud instance may consist of one or many [PODs](https://kuberne
 
 A pod (as in a pod of whales or pea pod) is a group of one or more containers (such as Docker containers), with shared storage/network, and a specification for how to run the containers. A pod’s contents are always co-located and co-scheduled, and run in a shared context. A pod models an application-specific “logical host” - it contains one or more application containers which are relatively tightly coupled — in a pre-container world, being executed on the same physical or virtual machine would mean being executed on the same logical host.
 
-In Vue Storefront Your instance is initialized with the following PODs (the names are automatically generated and are subject to change in Your Project):
+In Vue Storefront your instance is initialized with the following PODs (the names are automatically generated and are subject to change in your project):
 
 ```
 ┌─────────────────────────────────────────────┬──────────┬──────────┬─────────────────────────┐
@@ -24,7 +24,7 @@ In Vue Storefront Your instance is initialized with the following PODs (the name
 └─────────────────────────────────────────────┴──────────┴──────────┴─────────────────────────┘
 ```
 
-To list the available PODs in Your environment please run the following command:
+To list the available PODs in your environment, please run the following command:
 
 ```bash
 node scripts/cli.js pods
