@@ -1,7 +1,7 @@
 # Magento integration
 
 Storefront Cloud offers you a special Command Line tool to import the data from your Magento2 instance. 
-Before that, we need to configure your Magento2 instance to provide us with the **oauth2** credentials, required to run the API requests.
+Before that, we need to configure your Magento2 instance to provide us with the **OAuth2** credentials, required to run the API requests.
 
 ## Magento API configuration
 
@@ -17,7 +17,7 @@ Then click _Add new integration_ and just fill:
 
 ![Magento API](/doc/magento_2.png)
 
-In the result, you’ll click _Activate_ and get some oauth access tokens:
+In the result, you’ll click _Activate_ and get some OAuth access tokens:
 
 ![Magento tokens](/doc/magento_3.png)
 
