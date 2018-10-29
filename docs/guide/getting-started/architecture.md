@@ -1,17 +1,15 @@
 # Architecture
 
-
-
- Typically, You're getting from Storefront Cloud team access to two Kubernetes **Namespaces** (two instances). For instance - let's take a look how the deployment of our <a href="https://demo.storefrontcloud.io">demo.storefrontcloud.io</a>. 
+Typically, you get access to two Kubernetes **Namespaces** (two instances) from the Storefront Cloud team. For instance, let's take a look at the deployment of our <a href="https://demo.storefrontcloud.io">demo.storefrontcloud.io</a>. 
 
  There are **two namespaces**:
 
- - **demo-storefrontcloud-io** - which is the instance where the **prod** version of Your Vue Storefront app is deployed,
- - **demo-test-storefrontcloud-io** - which is the instance where the **test** versin of Your Vue Storefront app is deployed.
+ - **demo-storefrontcloud-io** - which is the instance where the **prod** version of your Vue Storefront app is deployed,
+ - **demo-test-storefrontcloud-io** - which is the instance where the **test** version of your Vue Storefront app is deployed.
 
 <img src="/doc/architecture-diagram.png" />
 
- Each namespaces includes **PODs** (POD is kind of Kubernetes app container):
+ Each namespace includes **PODs** (POD is kind of Kubernetes app container):
 
  ```
 ┌─────────────────────────────────────────────┬──────────┬──────────┬─────────────────────────┐
@@ -31,10 +29,10 @@
 └─────────────────────────────────────────────┴──────────┴──────────┴─────────────────────────┘
 ```
 
-Together with the Kubernetes namespaces, Vue Storefront team is providing You with **git** access via <a href="https://code.vuestorefront.io">Storefront Cloud Code Access</a> site. You may find two repositories in there:
+Along with the Kubernetes namespaces, the Vue Storefront team provides you with **git** access via the <a href="https://code.vuestorefront.io">Storefront Cloud Code Access</a> site. You may find two repositories in there:
 
-- <a href="https://code.storefrontcloud.io/Divante/demo-storefrontcloud-io">**demo-storefrontcloud-io**</a> - which **master** branch is used to deploy the production frontend and **develop** branch is used to deploy the test frontend,
-- <a href="https://code.storefrontcloud.io/Divante/demo-storefrontcloud-io-api">**demo-storefrontcloud-io-api**</a> - which **master** branch is used to deploy the production API and **develop** branch is used to deploy the test API.
+- <a href="https://code.storefrontcloud.io/Divante/demo-storefrontcloud-io">**demo-storefrontcloud-io**</a> - where the **master** branch is used to deploy the production frontend and the **develop** branch is used to deploy the test frontend,
+- <a href="https://code.storefrontcloud.io/Divante/demo-storefrontcloud-io-api">**demo-storefrontcloud-io-api**</a> - where the **master** branch is used to deploy the production API and the **develop** branch is used to deploy the test API.
 
 The namespaces are bound to the public URL addresses:
 
