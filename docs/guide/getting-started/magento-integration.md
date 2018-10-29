@@ -83,4 +83,4 @@ node scripts/cli.js import
 
 ## Advanced scenarios
 
-Storefront Cloud uses the [mage2vuestorefront](https://github.com/DivanteLtd/mage2vuestorefront) to execute the Magento synchronization. This tool offers way more syncing scenarios: for example on-demand indexing or delta-main indexing schemas. Please [contact us](mailto:support@storefrontcloud.io) for details.
+Storefront Cloud uses the [mage2vuestorefront](https://github.com/DivanteLtd/mage2vuestorefront) to execute the Magento synchronization. This tool offers way more syncing scenarios: for example, on-demand indexing or delta-main indexing schemas. Please [contact us](mailto:support@storefrontcloud.io) for details.
