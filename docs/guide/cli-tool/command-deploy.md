@@ -16,13 +16,13 @@ The namespaces are bound to the public URL addresses:
 - <a href="https://code.storefrontcloud.io/Divante/demo-storefrontcloud-io-api">**demo-storefrontcloud-io-api**</a> is deployed under <a href="https://demo.storefrontcloud.io/api">demo.storefrontcloud.io/api</a>
 
 
-To deploy the changes to **demo.storefrontcloud.io** You may run:
+To deploy the changes to **demo.storefrontcloud.io** you may run:
 
 ```
 node scripts/cli.js deploy --pod=front
 ```
 
-To deploy the changes to **demo.storefrontcloud.io/api** You may run:
+To deploy the changes to **demo.storefrontcloud.io/api** you may run:
 
 ```
 node scripts/cli.js deploy --pod=api
