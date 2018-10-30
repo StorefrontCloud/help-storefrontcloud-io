@@ -25,4 +25,4 @@ node scripts/cli.js pod --pod=front
 
 ... will also set the current POD to `vue-storefront-848799bd5d-zvcd4`
 
-The current POD, along with the current Namespace name, will be usedwith all subsequent `cli` calls setting the proper context. You may also use the `--pod=<podname>|<rolename>` to switch the POD ad-hoc.
+The current POD, along with the current Namespace name, will be used with all subsequent `cli` calls setting the proper context. You may also use the `--pod=<podname>|<rolename>` to switch the POD ad-hoc.
