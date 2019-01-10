@@ -32,7 +32,7 @@ Read more on [the Architecture](getting-started/architecture.html) to better und
 
 To get direct help please contact us via:
 
-- [E-mail address](mailto:support@storefrontcloud.io) connected to our [Zendesk](https://storefrontcloud.zendesk.com/)
+- [E-mail address](mailto:support@storefrontcloud.io)
 - [Slack channel](http://storefrontcloud.slack.com)
 
 ## Community
