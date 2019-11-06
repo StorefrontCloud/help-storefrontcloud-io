@@ -1,5 +1,6 @@
 module.exports = {
     base: '/',
+    port: '8081',
     head: [['link', { rel: 'icon', href: '/favicon.png' }]],
     themeConfig: {
       repo: 'StorefrontCloud/help-storefrontcloud-io',
@@ -46,8 +47,15 @@ module.exports = {
               'cli-tool/command-import',
               'cli-tool/command-pm2',
               'cli-tool/command-reload',
-              'cli-tool/command-monitor',
-
+              'cli-tool/command-monitor'
+            ],
+          },
+          {
+            title: 'CI/CD',
+            collapsable: false,
+            children: [
+              'ci/general-information',
+              'ci/kaniko'
             ],
           },
           // {

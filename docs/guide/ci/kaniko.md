@@ -1,0 +1,3 @@
+# Building images with kaniko and GitLab CI/CD
+
+[Docker-in-docker builds](https://docs.gitlab.com/ee/ci/docker/using_docker_build.html#use-docker-in-docker-workflow-with-docker-executor) requires privileged mode in order to function, which is a significant security concern and because of that, we recommend using [kaniko](https://github.com/GoogleContainerTools/kaniko) to build docker images. On the Storefront Cloud CI is configured to use Kaniko by default. More information about GitLab and Kaniko you can find in [GitLab documentation](https://docs.gitlab.com/ee/ci/docker/using_kaniko.html)
