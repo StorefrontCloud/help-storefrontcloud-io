@@ -46,8 +46,16 @@ module.exports = {
               'cli-tool/command-import',
               'cli-tool/command-pm2',
               'cli-tool/command-reload',
-              'cli-tool/command-monitor',
-
+              'cli-tool/command-monitor'
+            ],
+          },
+          {
+            title: 'CI/CD',
+            collapsable: false,
+            children: [
+              'ci/general-information',
+              'ci/build-docker-image',
+              'ci/deployment'
             ],
           },
           // {

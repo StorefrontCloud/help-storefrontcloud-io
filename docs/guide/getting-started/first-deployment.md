@@ -19,24 +19,8 @@ The namespaces are bound to the public URL addresses:
 To deploy the code changes, please:
 
 - check if all changes have been committed to the right branch (develop for **theinstance-test.storefrontcloud.io**, master for **theinstance.storefrontcloud.io**),
-- execute the CLI tool [deploy command](../cli-tool/command-deploy.html).
+- push branch to git repository
 
-To deploy the changes to **demo.storefrontcloud.io** you may run:
+For **theinstance-test.storefrontcloud.io** all commits pushed to develop branch are deployed automatically by Continuous Integration tool.
 
-```
-node scripts/cli.js deploy --pod=front
-```
-
-To deploy the changes to **demo.storefrontcloud.io/api** you may run:
-
-```
-node scripts/cli.js deploy --pod=api
-```
-
-This command will execute the following sequence of steps:
-- create a new instance of the selected role's container,
-- run the initialization + deployment procedure,
-- kill the old container whenever the new one is up and running,
-- select the new container as the default one.
-
-<img src="/doc/deploy-command.png" />
+For **theinstance.storefrontcloud.io** to deploy master branch you have to create a new git tag. When you create the tag it is deployed automatically by CI.
