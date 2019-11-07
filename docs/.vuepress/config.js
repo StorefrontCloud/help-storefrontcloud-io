@@ -55,7 +55,8 @@ module.exports = {
             collapsable: false,
             children: [
               'ci/general-information',
-              'ci/kaniko'
+              'ci/build-docker-image',
+              'ci/deployment'
             ],
           },
           // {
