@@ -55,7 +55,8 @@ module.exports = {
             children: [
               'ci/general-information',
               'ci/build-docker-image',
-              'ci/deployment'
+              'ci/deployment',
+              'ci/docker-registry'
             ],
           },
           // {
