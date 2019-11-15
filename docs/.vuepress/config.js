@@ -56,7 +56,8 @@ module.exports = {
               'ci/general-information',
               'ci/build-docker-image',
               'ci/deployment',
-              'ci/docker-registry'
+              'ci/docker-registry',
+              'ci/customize-docker-image'
             ],
           },
           // {
