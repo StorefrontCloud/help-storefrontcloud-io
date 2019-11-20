@@ -30,4 +30,4 @@ deploy-to-prod:
     - tags
 ```
 
-How read this configuration? For us, the most important part is the `script` definition. Ther is only a call to our tool responsible for deploy by `curl`. The tool is available only for runners on address `http://10.29.1.1:4000/instances`.
+How read this configuration? For us most importan part is `script` definition. Ther is only call to our tool responsible for deploy by `curl`. The tool is available only for runners on address `http://10.29.1.1:4000/`.

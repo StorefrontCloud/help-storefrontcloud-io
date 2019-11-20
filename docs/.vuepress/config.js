@@ -54,6 +54,7 @@ module.exports = {
             collapsable: false,
             children: [
               'ci/general-information',
+              'ci/stages',
               'ci/build-docker-image',
               'ci/deployment',
               'ci/docker-registry',
