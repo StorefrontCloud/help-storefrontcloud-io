@@ -31,3 +31,15 @@ deploy-to-prod:
 ```
 
 How read this configuration? For us most importan part is `script` definition. Ther is only call to our tool responsible for deploy by `curl`. The tool is available only for runners on address `http://10.29.1.1:4000/`.
+
+## Deploy Check
+In stage `deploy-to-staging-check` and `deploy-to-prod-check` is run a script which confirms deployment success. For success deployment output will be similar to below:
+```
+Downloading artifacts from coordinator... ok        id=7150 responseStatus=200 OK token=hnrBT1oP
+$ cd /usr/src/app
+$ echo $KUBE_CONFIG_TEST | base64 --decode > /tmp/kubeconfig
+$ bundle exec ruby deploy_checker.rb --tag ${CI_COMMIT_SHA:0:8} --kubeconfig /tmp/kubeconfig --namespace test-storefrontcloud-io
+.................................................................................................................
+Great news! Deploy succeeded!
+Job succeeded
+```
