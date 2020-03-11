@@ -1,12 +1,7 @@
 module.exports = {
     base: '/',
     head: [
-      ['link', { rel: "apple-touch-icon", sizes: "180x180", href: "/favicons/apple-touch-icon.png"}],
-      ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicons/favicon-32x32.png"}],
-      ['link', { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicons/favicon-16x16.png"}],
-      ['link', { rel: "manifest", href: "/favicons/site.webmanifest"}],
-      ['link', { rel: "mask-icon", href: "/favicons/safari-pinned-tab.svg", color: "#3a0839"}],
-      ['link', { rel: "shortcut icon", href: "/favicons/favicon.ico"}],
+      ['link', { rel: "icon", type: "image/x-icon", href: "https://divante.co/open-graph/favicons/SC_favicon.png"}]
      ],
     themeConfig: {
       repo: 'StorefrontCloud/help-storefrontcloud-io',
@@ -38,6 +33,19 @@ module.exports = {
             ],
           },
           {
+            title: 'CI/CD',
+            collapsable: false,
+            children: [
+              'ci/general-information',
+              'ci/stages',
+              'ci/build-docker-image',
+              'ci/deployment',
+              'ci/docker-registry',
+              'ci/customize-docker-image',
+              'ci/external-ci-tools'
+            ],
+          },
+          {
             title: 'CLI tool',
             collapsable: false,
             children: [
@@ -54,18 +62,6 @@ module.exports = {
               'cli-tool/command-pm2',
               'cli-tool/command-reload',
               'cli-tool/command-monitor'
-            ],
-          },
-          {
-            title: 'CI/CD',
-            collapsable: false,
-            children: [
-              'ci/general-information',
-              'ci/stages',
-              'ci/build-docker-image',
-              'ci/deployment',
-              'ci/docker-registry',
-              'ci/customize-docker-image'
             ],
           },
           // {
