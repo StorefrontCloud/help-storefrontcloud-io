@@ -1,0 +1,11 @@
+version: '3'
+services:
+  vuepress:
+    image: registry.storefrontcloud.io/help
+    build:
+      context: ./
+      dockerfile: ./dev/docker/Dockerfile
+    volumes:
+      - "./:/usr/src/app"
+    ports:
+      - '48444:4000'
