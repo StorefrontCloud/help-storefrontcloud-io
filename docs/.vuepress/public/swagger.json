@@ -3,7 +3,7 @@
   "info": {
     "title": "Storefront Cloud API",
     "description": "These APIs provide services for manipulating Storefront Cloud project.",
-    "version": "1.0"
+    "version": "0.1 Beta"
   },
   "host": "farmer.storefrontcloud.io",
   "schemes": [

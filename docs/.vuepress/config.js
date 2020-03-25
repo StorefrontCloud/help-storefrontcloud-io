@@ -3,6 +3,7 @@ module.exports = {
     head: [
       ['link', { rel: "icon", type: "image/x-icon", href: "https://divante.co/open-graph/favicons/SC_favicon.png" }],
       ['link', { rel: "stylesheet", type: "text/css", href: "/css/swagger-ui.css" }],
+      ['link', { rel: "stylesheet", type: "text/css", href: "/css/custom.css" }],
       ['script', { src: "/js/swagger-ui-bundle.js" }],
       ['script', { src: "/js/swagger-ui-standalone-preset.js" }],
       ['script', { }, `
