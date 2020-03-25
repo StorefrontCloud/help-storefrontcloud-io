@@ -1,0 +1,98 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Storefront Cloud API",
+    "description": "These APIs provide services for manipulating Storefront Cloud project.",
+    "version": "1.0"
+  },
+  "host": "farmer.storefrontcloud.io",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "basePath": "/",
+  "produces": [
+    "application/json"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "securityDefinitions": {
+    "basicAuth": {
+      "type": "basic"
+    }
+  },
+  "paths": {
+    "/deploy_check/{project}/{tag}": {
+      "get": {
+        "summary": "Check if tag is deployed",
+        "description": "Using this endpoint you can check if sepecifed tag is deployed and ready",
+        "tags": [
+          "deploy_check"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/deploy_check_response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/flush_cache/{project}": {
+      "delete": {
+        "summary": "Flush cache for instance",
+        "description": "Using this endpoint you can flush cache for your instance",
+        "tags": [
+          "flush_cache"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/flush_cache_response"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "deploy_check_response": {
+        "type": "json",
+        "properties": {
+          "code": {
+            "type": "integer"
+          },
+          "ready": {
+            "type": "string [0|1]"
+          },
+          "deployed": {
+            "type": "string [0|1]"
+          }
+        }
+      },
+      "flush_cache_response": {
+        "type": "json",
+        "properties": {
+          "code": {
+            "type": "integer"
+          },
+          "result": {
+            "type": "string [0|1]"
+          }
+        }
+      }
+    }
+  }
+}

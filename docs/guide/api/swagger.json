@@ -1,0 +1,44 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Storefront Cloud API",
+    "description": "These APIs provide services for manipulating Storefront Cloud project.",
+    "version": "1.0"
+  },
+  "host": "farmer.storefrontcloud.io",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "basePath": "/",
+  "produces": [
+    "application/json"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "securityDefinitions": {
+    "basicAuth": {
+      "type": "basic"
+    }
+  },
+  "paths": {
+    "/deploy_check/{project}/{tag}": {
+      "get": {
+        "summary": "Check if tag is deployed",
+        "description": "Using this endpoint you can check if sepecifed tag is deployed and ready",
+        "tags": [
+          "deploy_check"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "schema": {
+            "type": "json",
+          }
+        }
+      }
+    }
+  }
+}

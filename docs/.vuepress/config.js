@@ -1,8 +1,34 @@
 module.exports = {
     base: '/',
     head: [
-      ['link', { rel: "icon", type: "image/x-icon", href: "https://divante.co/open-graph/favicons/SC_favicon.png"}]
+      ['link', { rel: "icon", type: "image/x-icon", href: "https://divante.co/open-graph/favicons/SC_favicon.png" }],
+      ['link', { rel: "stylesheet", type: "text/css", href: "/css/swagger-ui.css" }],
+      ['script', { src: "/js/swagger-ui-bundle.js" }],
+      ['script', { src: "/js/swagger-ui-standalone-preset.js" }],
+      ['script', { }, `
+        window.onload = function() {
+          if (window.location.pathname == '/guide/api/swagger.html') {
+            // Begin Swagger UI call region
+            const ui = SwaggerUIBundle({
+              url: "/swagger.json",
+              "dom_id": "#swagger-ui",
+              deepLinking: true,
+              presets: [
+                SwaggerUIBundle.presets.apis,
+                SwaggerUIStandalonePreset
+              ],
+              plugins: [
+                SwaggerUIBundle.plugins.DownloadUrl
+              ],
+              layout: "StandaloneLayout",
+            })
+            // End Swagger UI call region
+
+            window.ui = ui
+          }
+        }`
      ],
+    ],
     themeConfig: {
       repo: 'StorefrontCloud/help-storefrontcloud-io',
       docsDir: 'docs',
@@ -64,6 +90,13 @@ module.exports = {
               'cli-tool/command-reload',
               'cli-tool/command-monitor'
             ],
+          },
+          {
+            title: 'API Reference',
+            collapsable: false,
+            children: [
+              'api/swagger'
+            ]
           }
         ],
       },
