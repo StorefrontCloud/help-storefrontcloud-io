@@ -96,7 +96,8 @@ module.exports = {
             title: 'API Reference',
             collapsable: false,
             children: [
-              'api/swagger'
+              'api/swagger',
+              'api/access'
             ]
           }
         ],
