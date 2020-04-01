@@ -1,10 +1,10 @@
-# Configuration file in the Cloud
+# Configuration files in the Cloud
 
 Configuration of your instance application, both the front application and the API application, is managed (merged) by module [node-config](https://github.com/lorenwest/node-config).
 
 For both instances, we crate file `local-cloud.json` which overrides your default configuration. We do it because some parts of your instance configuration in a cloud environment should be constant, e.g., Redis host, ElasticSerach host, API host and API endpoints. The file is named local-cloud.json because the patter for the name is `local-{deployment}.EXT`, and we set `{deployment}` by environment variable $NODE_CONFIG_ENV to `cloud`. To better understand how the name of files should be created and what is the order of merging configuration please read the [module documentation](https://github.com/lorenwest/node-config/wiki/Configuration-Files#multi-instance-deployments)
 
-## local-cloud.json
+## Our local-cloud.json
 
 The default template for the front application, file `local-cloud.json` is below.
 
