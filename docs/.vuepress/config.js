@@ -49,7 +49,7 @@ module.exports = {
           '',
           {
             title: 'Getting started',
-            collapsable: false,
+            collapsable: true,
             children: [
               'getting-started/architecture',
               'getting-started/cli-tool',
@@ -62,7 +62,7 @@ module.exports = {
           },
           {
             title: 'CI/CD',
-            collapsable: false,
+            collapsable: true,
             children: [
               'ci/general-information',
               'ci/stages',
@@ -70,12 +70,13 @@ module.exports = {
               'ci/deployment',
               'ci/docker-registry',
               'ci/customize-docker-image',
-              'ci/external-ci-tools'
+              'ci/external-ci-tools',
+              'ci/customize-config'
             ],
           },
           {
             title: 'CLI tool',
-            collapsable: false,
+            collapsable: true,
             children: [
               'cli-tool/command-switch',
               'cli-tool/command-pods',
@@ -94,7 +95,7 @@ module.exports = {
           },
           {
             title: 'API Reference',
-            collapsable: false,
+            collapsable: true,
             children: [
               'api/swagger',
               'api/access'
