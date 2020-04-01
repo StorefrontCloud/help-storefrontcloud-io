@@ -1,27 +1,16 @@
 {
-  "swagger": "2.0",
+  "openapi": "3.0.0",
   "info": {
     "title": "Storefront Cloud API",
     "description": "These APIs provide services for manipulating Storefront Cloud project.",
     "version": "0.1 Beta"
   },
-  "host": "farmer.storefrontcloud.io",
-  "schemes": [
-    "http",
-    "https"
-  ],
-  "basePath": "/",
-  "produces": [
-    "application/json"
-  ],
-  "consumes": [
-    "application/json"
-  ],
-  "securityDefinitions": {
-    "basicAuth": {
-      "type": "basic"
+  "servers": [
+    {
+      "url": "https://farmer.storefrontcloud.io",
+      "description": "Production"
     }
-  },
+  ],
   "paths": {
     "/deploy_check/{project}/{tag}": {
       "get": {
@@ -29,6 +18,26 @@
         "description": "Using this endpoint you can check if sepecifed tag is deployed and ready",
         "tags": [
           "deploy_check"
+        ],
+        "parameters": [
+          {
+            "name": "project",
+            "in": "path",
+            "required": true,
+            "description": "Project name",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tag",
+            "in": "path",
+            "required": true,
+            "description": "Docker tag",
+            "schema": {
+              "type": "string"
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -51,6 +60,38 @@
         "tags": [
           "flush_cache"
         ],
+        "parameters": [
+          {
+            "name": "project",
+            "in": "path",
+            "required": true,
+            "description": "Project name",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/flush_cache_response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/instances": {
+      "post": {
+        "summary": "Flush cache for instance",
+        "description": "Using this endpoint you can flush cache for your instance",
+        "tags": [
+          "instances"
+        ],
         "responses": {
           "200": {
             "description": "Success",
@@ -67,29 +108,35 @@
     }
   },
   "components": {
+    "securitySchemes": {
+      "BasicAuth": {
+        "type": "http",
+        "scheme": "basic"
+      }
+    },
     "schemas": {
       "deploy_check_response": {
-        "type": "json",
+        "type": "object",
         "properties": {
           "code": {
             "type": "integer"
           },
           "ready": {
-            "type": "string [0|1]"
+            "type": "string"
           },
           "deployed": {
-            "type": "string [0|1]"
+            "type": "string"
           }
         }
       },
       "flush_cache_response": {
-        "type": "json",
+        "type": "object",
         "properties": {
           "code": {
             "type": "integer"
           },
           "result": {
-            "type": "string [0|1]"
+            "type": "string"
           }
         }
       }

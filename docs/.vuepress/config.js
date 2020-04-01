@@ -11,7 +11,7 @@ module.exports = {
           if (window.location.pathname == '/guide/api/swagger.html') {
             // Begin Swagger UI call region
             const ui = SwaggerUIBundle({
-              url: "/swagger.json",
+              url: "/openapi.json",
               "dom_id": "#swagger-ui",
               deepLinking: true,
               presets: [
