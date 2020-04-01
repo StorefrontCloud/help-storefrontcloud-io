@@ -92,6 +92,17 @@
         "tags": [
           "instances"
         ],
+        "requestBody": {
+          "description": "Optional description in *Markdown*",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/instances_request_body"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "Success",
@@ -139,6 +150,34 @@
             "type": "string"
           }
         }
+      },
+      "instances_request_body": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "Instance code"
+          },
+          "region": {
+            "type": "string",
+            "description": "Region code"
+          },
+          "frontContainerVersion": {
+            "type": "string",
+            "description": "Front container docker tag"
+          },
+          "apiContainerVersion": {
+            "type": "string",
+            "description": "API container docker tag"
+          },
+          "previewFrontContainerVersion": {
+            "type": "string",
+            "description": "Front container docker tag for preview"
+          }
+        },
+        "required": [
+          "code"
+        ]
       }
     }
   }
