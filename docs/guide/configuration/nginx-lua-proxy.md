@@ -33,4 +33,6 @@ Nginx Lua Proxy works only with Redis DB0!
 If you want to use it please set `db: 0` in your instance configuration. More information about Redis configuration you can find in [Vue Storefront documentation](https://docs.vuestorefront.io/guide/basics/configuration.html#redis).
 :::
 
+::: tip
 To enable Nginx Lua Proxy on your instance please contact us.
+:::
