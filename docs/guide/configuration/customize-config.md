@@ -1,4 +1,4 @@
-# Configuration files in the Cloud
+# Configuration files
 
 Configuration of your instance application, both the front application and the API application, is managed (merged) by module [node-config](https://github.com/lorenwest/node-config).
 

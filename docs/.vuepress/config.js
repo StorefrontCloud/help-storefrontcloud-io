@@ -61,6 +61,14 @@ module.exports = {
             ],
           },
           {
+            title: 'Configuration',
+            collapsable: true,
+            children: [
+              'configuration/customize-config',
+              'configuration/nginx-lua-proxy'
+            ],
+          },
+          {
             title: 'CI/CD',
             collapsable: true,
             children: [
@@ -70,8 +78,7 @@ module.exports = {
               'ci/deployment',
               'ci/docker-registry',
               'ci/customize-docker-image',
-              'ci/external-ci-tools',
-              'ci/customize-config'
+              'ci/external-ci-tools'
             ],
           },
           {
