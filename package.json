@@ -4,8 +4,8 @@
   "description": "Help site for Storefront Cloud",
   "main": "index.js",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:dev": "node_modules/.bin/vuepress dev docs",
+    "docs:build": "node_modules/.bin/vuepress build docs"
   },
   "repository": {
     "type": "git",

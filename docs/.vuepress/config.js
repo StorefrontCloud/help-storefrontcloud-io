@@ -65,7 +65,8 @@ module.exports = {
             collapsable: true,
             children: [
               'configuration/customize-config',
-              'configuration/nginx-lua-proxy'
+              'configuration/cache-nginx-static-files',
+              'configuration/cache-nginx-lua-proxy'
             ],
           },
           {
