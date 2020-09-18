@@ -19,6 +19,9 @@
         "tags": [
           "deploy_check"
         ],
+        "security": [
+          {"BasicAuth": []}
+        ],
         "parameters": [
           {
             "name": "project",
@@ -60,6 +63,9 @@
         "tags": [
           "flush_cache"
         ],
+        "security": [
+          {"BasicAuth": []}
+        ],
         "parameters": [
           {
             "name": "project",
@@ -91,6 +97,11 @@
         "description": "Using this endpoint you can deploy a new version of your instance",
         "tags": [
           "instances"
+        ],
+        "security": [
+          {"BasicAuth": []},
+          {"ApiKey": []},
+          {"UserId": []}
         ],
         "requestBody": {
           "description": "Optional description in *Markdown*",
@@ -124,6 +135,11 @@
         "tags": [
           "instance"
         ],
+        "security": [
+          {"BasicAuth": []},
+          {"ApiKey": []},
+          {"UserId": []}
+        ],
         "responses": {
           "200": {
             "description": "Success",
@@ -144,6 +160,11 @@
         "description": "Using this endpoint you can list all pods for selected instance on Storefront Cloud",
         "tags": [
           "instance"
+        ],
+        "security": [
+          {"BasicAuth": []},
+          {"ApiKey": []},
+          {"UserId": []}
         ],
         "parameters": [
           {
@@ -176,6 +197,11 @@
         "description": "Using this endpoint you can get all logs for pod deployed on Storefront Cloud",
         "tags": [
           "instance"
+        ],
+        "security": [
+          {"BasicAuth": []},
+          {"ApiKey": []},
+          {"UserId": []}
         ],
         "parameters": [
           {
@@ -217,6 +243,16 @@
       "BasicAuth": {
         "type": "http",
         "scheme": "basic"
+      },
+      "ApiKey": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-Api-Key"
+      },
+      "UserId": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-User-Id"
       }
     },
     "schemas": {
@@ -324,5 +360,10 @@
         }
       }
     }
-  }
+  },
+  "security": [
+    {"BasicAuth": []},
+    {"ApiKey": []},
+    {"UserId": []}
+  ]
 }
