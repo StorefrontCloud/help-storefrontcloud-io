@@ -1,0 +1,369 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Storefront Cloud API",
+    "description": "These APIs provide services for manipulating Storefront Cloud project.",
+    "version": "0.1 Beta"
+  },
+  "servers": [
+    {
+      "url": "https://farmer.storefrontcloud.io",
+      "description": "Production"
+    }
+  ],
+  "paths": {
+    "/deploy_check/{project}/{tag}": {
+      "get": {
+        "summary": "Check if tag is deployed",
+        "description": "Using this endpoint you can check if sepecifed tag is deployed and ready",
+        "tags": [
+          "deploy_check"
+        ],
+        "security": [
+          {"BasicAuth": []}
+        ],
+        "parameters": [
+          {
+            "name": "project",
+            "in": "path",
+            "required": true,
+            "description": "Project name",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tag",
+            "in": "path",
+            "required": true,
+            "description": "Docker tag",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/deploy_check_response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/flush_cache/{project}": {
+      "delete": {
+        "summary": "Flush cache for instance",
+        "description": "Using this endpoint you can flush cache for your instance",
+        "tags": [
+          "flush_cache"
+        ],
+        "security": [
+          {"BasicAuth": []}
+        ],
+        "parameters": [
+          {
+            "name": "project",
+            "in": "path",
+            "required": true,
+            "description": "Project name",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/flush_cache_response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/instances": {
+      "post": {
+        "summary": "Manage your instance [deprecated]",
+        "description": "Using this endpoint you can deploy a new version of your instance",
+        "tags": [
+          "instances"
+        ],
+        "security": [
+          {"BasicAuth": []},
+          {"ApiKey": []},
+          {"UserId": []}
+        ],
+        "requestBody": {
+          "description": "Optional description in *Markdown*",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/instances_request_body"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/instances_response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/instance": {
+      "get": {
+        "summary": "Get list of your instances",
+        "description": "Using this endpoint you can list all instances deployed on Storefront Cloud",
+        "tags": [
+          "instance"
+        ],
+        "security": [
+          {"BasicAuth": []},
+          {"ApiKey": []},
+          {"UserId": []}
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/instance_get_response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/instance/{project}/pod": {
+      "get": {
+        "summary": "Get list of pods of your instance",
+        "description": "Using this endpoint you can list all pods for selected instance on Storefront Cloud",
+        "tags": [
+          "instance"
+        ],
+        "security": [
+          {"BasicAuth": []},
+          {"ApiKey": []},
+          {"UserId": []}
+        ],
+        "parameters": [
+          {
+            "name": "project",
+            "in": "path",
+            "required": true,
+            "description": "Project name",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/instance_pod_get_response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/instance/{project}/pod/{pod}/log": {
+      "get": {
+        "summary": "Get logs for selected pods from your instance",
+        "description": "Using this endpoint you can get all logs for pod deployed on Storefront Cloud",
+        "tags": [
+          "instance"
+        ],
+        "security": [
+          {"BasicAuth": []},
+          {"ApiKey": []},
+          {"UserId": []}
+        ],
+        "parameters": [
+          {
+            "name": "project",
+            "in": "path",
+            "required": true,
+            "description": "Project name",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pod",
+            "in": "path",
+            "required": true,
+            "description": "Pod name",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/instance_pod_log_get_response"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "BasicAuth": {
+        "type": "http",
+        "scheme": "basic"
+      },
+      "ApiKey": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-Api-Key"
+      },
+      "UserId": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-User-Id"
+      }
+    },
+    "schemas": {
+      "deploy_check_response": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer"
+          },
+          "ready": {
+            "type": "string"
+          },
+          "deployed": {
+            "type": "string"
+          }
+        }
+      },
+      "flush_cache_response": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer"
+          },
+          "result": {
+            "type": "string"
+          }
+        }
+      },
+      "instances_request_body": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "Instance code"
+          },
+          "region": {
+            "type": "string",
+            "description": "Region code"
+          },
+          "frontContainerVersion": {
+            "type": "string",
+            "description": "Front container docker tag"
+          },
+          "apiContainerVersion": {
+            "type": "string",
+            "description": "API container docker tag"
+          },
+          "previewFrontContainerVersion": {
+            "type": "string",
+            "description": "Front container docker tag for preview"
+          }
+        },
+        "required": [
+          "code"
+        ]
+      },
+      "instances_response": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer"
+          },
+          "result": {
+            "type": "string"
+          }
+        }
+      },
+      "instance_get_response": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer"
+          },
+          "inastances": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "instance_pod_get_response": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer"
+          },
+          "pods": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "instance_pod_log_get_response": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer"
+          },
+          "logs": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {"BasicAuth": []},
+    {"ApiKey": []},
+    {"UserId": []}
+  ]
+}

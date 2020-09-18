@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Architecture | Storefront Cloud</title>
+    <meta name="generator" content="VuePress 1.5.3">
+    <link rel="icon" type="image/x-icon" href="https://divante.co/open-graph/favicons/SC_favicon.png">
+    <link rel="stylesheet" type="text/css" href="/css/swagger-ui.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <script src="/js/swagger-ui-bundle.js"></script>
+    <script src="/js/swagger-ui-standalone-preset.js"></script>
+    <script>
+        window.onload = function() {
+          if (window.location.pathname == '/guide/api/swagger.html') {
+            // Begin Swagger UI call region
+            const ui = SwaggerUIBundle({
+              url: "/openapi.json",
+              "dom_id": "#swagger-ui",
+              deepLinking: true,
+              presets: [
+                SwaggerUIBundle.presets.apis,
+                SwaggerUIStandalonePreset
+              ],
+              plugins: [
+                SwaggerUIBundle.plugins.DownloadUrl
+              ],
+              layout: "StandaloneLayout",
+            })
+            // End Swagger UI call region
+
+            window.ui = ui
+          }
+        }</script>
+    <meta name="description" content="Knowledge Base for Storefront Cloud service">
+    <link rel="preload" href="/assets/css/0.styles.29a2c3e4.css" as="style"><link rel="preload" href="/assets/js/app.7205d2f6.js" as="script"><link rel="preload" href="/assets/js/2.92063fc1.js" as="script"><link rel="preload" href="/assets/js/32.aaa816a0.js" as="script"><link rel="prefetch" href="/assets/js/10.e9aa27c8.js"><link rel="prefetch" href="/assets/js/11.d07b3f55.js"><link rel="prefetch" href="/assets/js/12.7418e39a.js"><link rel="prefetch" href="/assets/js/13.c06bbe82.js"><link rel="prefetch" href="/assets/js/14.3d5a97a3.js"><link rel="prefetch" href="/assets/js/15.547a70cd.js"><link rel="prefetch" href="/assets/js/16.912a4fb9.js"><link rel="prefetch" href="/assets/js/17.c69fb93e.js"><link rel="prefetch" href="/assets/js/18.ef3e0d8a.js"><link rel="prefetch" href="/assets/js/19.1c0e5845.js"><link rel="prefetch" href="/assets/js/20.a37f759a.js"><link rel="prefetch" href="/assets/js/21.9ad855a9.js"><link rel="prefetch" href="/assets/js/22.e097e3e6.js"><link rel="prefetch" href="/assets/js/23.7f4352d0.js"><link rel="prefetch" href="/assets/js/24.23a5cedd.js"><link rel="prefetch" href="/assets/js/25.af782c1b.js"><link rel="prefetch" href="/assets/js/26.d6cf22f7.js"><link rel="prefetch" href="/assets/js/27.f8106ad1.js"><link rel="prefetch" href="/assets/js/28.ae6bb8e2.js"><link rel="prefetch" href="/assets/js/29.65cc1b57.js"><link rel="prefetch" href="/assets/js/3.d8a31682.js"><link rel="prefetch" href="/assets/js/30.fa46afa5.js"><link rel="prefetch" href="/assets/js/31.79bfb65d.js"><link rel="prefetch" href="/assets/js/33.f3ebbaa8.js"><link rel="prefetch" href="/assets/js/34.70564cc8.js"><link rel="prefetch" href="/assets/js/35.b99aacdb.js"><link rel="prefetch" href="/assets/js/36.a894cbfd.js"><link rel="prefetch" href="/assets/js/37.a4f5da9e.js"><link rel="prefetch" href="/assets/js/38.5c35742e.js"><link rel="prefetch" href="/assets/js/4.3b6a7e49.js"><link rel="prefetch" href="/assets/js/5.1d1bc398.js"><link rel="prefetch" href="/assets/js/6.d517345b.js"><link rel="prefetch" href="/assets/js/7.013da21f.js"><link rel="prefetch" href="/assets/js/8.a2ee030d.js"><link rel="prefetch" href="/assets/js/9.03ad4c41.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.29a2c3e4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Storefront Cloud</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://www.youtube.com/channel/UCkm1F3Cglty3CE1QwKQUhhg" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  YouTube
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://medium.com/the-vue-storefront-journal" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Medium
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/StorefrontCloud/help-storefrontcloud-io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://www.youtube.com/channel/UCkm1F3Cglty3CE1QwKQUhhg" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  YouTube
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://medium.com/the-vue-storefront-journal" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Medium
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/StorefrontCloud/help-storefrontcloud-io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/guide/" aria-current="page" class="sidebar-link">Welcome</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Getting started</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/getting-started/architecture.html" aria-current="page" class="active sidebar-link">Architecture</a></li><li><a href="/guide/getting-started/cli-tool.html" class="sidebar-link">Command Line Access</a></li><li><a href="/guide/getting-started/code-access.html" class="sidebar-link">Code Acccess</a></li><li><a href="/guide/getting-started/magento-integration.html" class="sidebar-link">Magento integration</a></li><li><a href="/guide/getting-started/first-deployment.html" class="sidebar-link">First Deployment</a></li><li><a href="/guide/getting-started/debugging-build.html" class="sidebar-link">Debugging build process</a></li><li><a href="/guide/getting-started/static-content-cache.html" class="sidebar-link">Cache for static content</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Configuration</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CI/CD</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CLI tool</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>API Reference</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="architecture"><a href="#architecture" class="header-anchor">#</a> Architecture</h1> <p>Typically, you get access to two Kubernetes <strong>Namespaces</strong> (two instances) from the Storefront Cloud team. For instance, let's take a look at the deployment of our <a href="https://demo.storefrontcloud.io">demo.storefrontcloud.io</a>.</p> <p>There are <strong>two namespaces</strong>:</p> <ul><li><strong>demo-storefrontcloud-io</strong> - which is the instance where the <strong>prod</strong> version of your Vue Storefront app is deployed,</li> <li><strong>demo-test-storefrontcloud-io</strong> - which is the instance where the <strong>test</strong> version of your Vue Storefront app is deployed.</li></ul> <img src="/doc/architecture-diagram.png"> <p>Each namespace includes <strong>PODs</strong> (POD is kind of Kubernetes app container):</p> <div class="language- extra-class"><pre class="language-text"><code>┌─────────────────────────────────────────────┬──────────┬──────────┬─────────────────────────┐
+│ POD name                                    │ Role     │ State    │ Start time              │
+├─────────────────────────────────────────────┼──────────┼──────────┼─────────────────────────┤
+│ elasticsearch-75cf68b6b7-thjsx              │ elastic  │ Running  │ 2018-10-12T11:36:05Z    │
+├─────────────────────────────────────────────┼──────────┼──────────┼─────────────────────────┤
+│ kibana-69777f68b-dd6s5                      │          │ Running  │ 2018-10-09T13:24:06Z    │
+├─────────────────────────────────────────────┼──────────┼──────────┼─────────────────────────┤
+│ nginx-6d68c9557-l67l2                       │ nginx    │ Running  │ 2018-10-09T13:24:02Z    │
+├─────────────────────────────────────────────┼──────────┼──────────┼─────────────────────────┤
+│ redis-84d7c989c9-5j4tq                      │ redis    │ Running  │ 2018-10-09T13:24:06Z    │
+├─────────────────────────────────────────────┼──────────┼──────────┼─────────────────────────┤
+│ vue-storefront-848799bd5d-zvcd4             │ front    │ Running  │ 2018-10-12T11:46:09Z    │
+├─────────────────────────────────────────────┼──────────┼──────────┼─────────────────────────┤
+│ vue-storefront-api-5c5dbc57fd-l9fhr         │ api      │ Running  │ 2018-10-12T14:14:37Z    │
+└─────────────────────────────────────────────┴──────────┴──────────┴─────────────────────────┘
+</code></pre></div><p>Along with the Kubernetes namespaces, the Vue Storefront team provides you with <strong>git</strong> access via the <a href="https://code.vuestorefront.io">Storefront Cloud Code Access</a> site. You may find two repositories in there:</p> <ul><li><a href="https://code.storefrontcloud.io/Divante/demo-storefrontcloud-io"><strong>demo-storefrontcloud-io</strong></a> - where the <strong>master</strong> branch is used to deploy the production frontend and the <strong>develop</strong> branch is used to deploy the test frontend,</li> <li><a href="https://code.storefrontcloud.io/Divante/demo-storefrontcloud-io-api"><strong>demo-storefrontcloud-io-api</strong></a> - where the <strong>master</strong> branch is used to deploy the production API and the <strong>develop</strong> branch is used to deploy the test API.</li></ul> <p>The namespaces are bound to the public URL addresses:</p> <ul><li><a href="https://code.storefrontcloud.io/Divante/demo-storefrontcloud-io"><strong>demo-storefrontcloud-io</strong></a> is deployed under <a href="https://demo.storefrontcloud.io">demo.storefrontcloud.io</a></li> <li><a href="https://code.storefrontcloud.io/Divante/demo-storefrontcloud-io-api"><strong>demo-storefrontcloud-io-api</strong></a> is deployed under <a href="https://demo.storefrontcloud.io/api">demo.storefrontcloud.io/api</a></li></ul> <img src="/doc/user-flow-diagram.png"></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/StorefrontCloud/help-storefrontcloud-io/edit/master/docs/guide/getting-started/architecture.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/guide/" class="prev router-link-active">
+        Welcome
+      </a></span> <span class="next"><a href="/guide/getting-started/cli-tool.html">
+        Command Line Access
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.7205d2f6.js" defer></script><script src="/assets/js/2.92063fc1.js" defer></script><script src="/assets/js/32.aaa816a0.js" defer></script>
+  </body>
+</html>
