@@ -21,7 +21,7 @@ In the result, you’ll click _Activate_ and get some OAuth access tokens:
 
 ![Magento tokens](/doc/magento_3.png)
 
-Now please **create and edit** the `config/local.js` file in your **api repository** and modify the following section:
+Now please **create and edit** the `config/local.json` file in your **api repository** and modify the following section:
 <img src="/doc/create-config.png" alt="You may create a new local config file using Gitlab" />
 
 ```json
@@ -64,7 +64,7 @@ Now please **create and edit** the `config/local.js` file in your **api reposito
     },
     "simd": true,
     "keepDownloads": true
-  },
+  }
 }
 ```
 
