@@ -1,0 +1,22 @@
+name: Deploy to VueStoreFront Cloud
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v1
+      - name: Build and publish docker image
+        uses: elgohr/Publish-Docker-Github-Action@master
+        with:
+          name: docs-storefrontcloud-io/cloud:${{ github.sha }}
+          registry: registry.storefrontcloud.io
+          username: ${{ secrets.CLOUD_USERNAME }}
+          password: ${{ secrets.CLOUD_PASSWORD }}
+          dockerfile: Dockerfile
+          buildoptions: "--compress"
