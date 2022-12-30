@@ -12,7 +12,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v1
       - name: Build and publish docker image
-        uses: elgohr/Publish-Docker-Github-Action@master
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: docs-storefrontcloud-io/cloud:${{ github.sha }}
           registry: registry.storefrontcloud.io
